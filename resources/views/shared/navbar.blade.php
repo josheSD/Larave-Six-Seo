@@ -22,11 +22,11 @@
                 <nav class="main-nav" id="main-nav">
                     <ul class="menu">
                         <div id="is_home"></div>
-                        <li class="menu__item"><a class="menu__item-link" href="{{ url('/') }}" >¿Quiénes somos?</a></li>
-                        <li class="menu__item"><a class="menu__item-link ancla scrolling" href="{{ url('/') }}"  data-ancla="somos">Nuestros geeks</a></li>
+                        <li class="menu__item"><a class="menu__item-link ancla scrolling" href="{{ url('/') }}"  data-ancla="quienes">¿Quiénes somos?</a></li>
+                        <li class="menu__item"><a class="menu__item-link ancla scrolling" href="{{ url('/') }}"  data-ancla="nuestros">Nuestros geeks</a></li>
                         <li class="menu__item"><a class="menu__item-link ancla scrolling" href="{{ url('/') }}"  data-ancla="servicios">Servicios</a></li>
-                        <li class="menu__item"><a class="menu__item-link ancla scrolling" href="{{ url('/') }}"  data-ancla="servicios">Haz la prueba</a></li>
-                        <li class="menu__item"><a class="menu__item-link ancla scrolling" href="{{ url('/geek') }}"  data-ancla="servicios">Encuentra tu geek</a></li>
+                        <li class="menu__item"><a class="menu__item-link ancla scrolling" href="{{ url('/') }}"  data-ancla="prueba">Haz la prueba</a></li>
+                        <li class="menu__item"><a class="menu__item-link ancla scrolling" href="{{ url('/geek') }}"  data-ancla="encuentra">Encuentra tu geek</a></li>
                     </ul>
                 </nav>
 

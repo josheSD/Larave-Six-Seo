@@ -17,8 +17,12 @@
     height:$height-header;
     display:grid;
     grid-template-rows: 1fr;
-    grid-template-columns:  repeat(2,1fr);
+    grid-template-columns:  1fr 1fr;
     align-items: center;
+
+    @include mediaquery(1060px){
+        grid-template-columns:  1fr 870px;
+    }
 
     &__logo{
         justify-self: start;
@@ -45,7 +49,7 @@
     transition: right .3s;
     z-index: var(--z-fixed);
 
-    @include mediaquery(large){
+    @include mediaquery(1060px){
         position:static;
         background:transparent;
         height:auto;
@@ -58,22 +62,37 @@
 
 }
 
+.menu__item:last-child > a{
+    background: #ffb02a ;
+    border:1px solid #ffb02a ;
+    padding:.8rem 1rem;
+    border-radius: 5rem;
+    cursor:pointer;
+}
+
+.menu__item-link{
+    font-weight:600;
+    text-transform:uppercase;
+    color:#fff;
+}
+
+
 .menu{
 
     list-style: none;
 
-    @include mediaquery(large){
+    @include mediaquery(1060px){
         display:flex;
     }
 
     &__item{
-        @include mediaquery(large){
+        @include mediaquery(1060px){
             padding:1rem;
         }
     }
 
     &__item:last-child{
-        @include mediaquery(large){
+        @include mediaquery(1060px){
             padding-right:0px;
         }
     }
@@ -109,104 +128,80 @@
         &.is-active .hamburger__inner,
         &.is-active .hamburger__inner::before,
         &.is-active .hamburger__inner::after{
-            background-color: #000;
+            background-color: #fff;
         }
     }
 
 
-    @include mediaquery(large){
+    @include mediaquery(1060px){
         display:none;
     }
 
 }
 
 .hamburger__box{
-    @include mediaquery(small){
-        width: 30px;
-        height: 20px;
-        display: inline-block;
-        position: relative;
-    }
+    width: 35px;
+    height: 20px;
+    display: inline-block;
+    position: relative;
 }
 
 .hamburger__inner {
-    @include mediaquery(small){
-        display: block;
-        top: 50%;
-        margin-top: -2px;
-    }
+    display: block;
+    top: 50%;
+    margin-top: -2px;
 }
 
 .hamburger__inner,
 .hamburger__inner::before,
 .hamburger__inner::after {
-    @include mediaquery(small){
-        width: 30px;
-        height: 4px;
-        background-color: #000;
-        border-radius: 4px;
-        position: absolute;
-        transition-property: transform;
-        transition-duration: 0.15s;
-        transition-timing-function: ease;
-    }
+    width: 35px;
+    height: 4px;
+    background-color: #fff;
+    position: absolute;
+    transition-property: transform;
+    transition-duration: 0.15s;
+    transition-timing-function: ease;
 }
 .hamburger__inner::before, .hamburger__inner::after {
     content: "";
-    @include mediaquery(small){
-        display: block;
-    }
+    display: block;
 }
 
 .hamburger__inner::before {
-    @include mediaquery(small){
-        top: -10px;
-    }
+    top: -10px;
 }
 
 .hamburger__inner::after {
-    @include mediaquery(small){
-        bottom: -10px;
-    }
+    bottom: -10px;
 }
 
 .hamburger--slider .hamburger__inner {
-    @include mediaquery(small){
-        top: 2px;
-    }
+    top: 2px;
 }
 
 .hamburger--slider .hamburger__inner::before {
-    @include mediaquery(small){
-        top: 8px;
-        transition-property: transform, opacity;
-        transition-timing-function: ease;
-        transition-duration: 0.15s;
-    }
+    top: 8px;
+    transition-property: transform, opacity;
+    transition-timing-function: ease;
+    transition-duration: 0.15s;
 }
 .hamburger--slider .hamburger__inner::after {
-    @include mediaquery(small){
-        top: 16px;
-    }
+    top: 16px;
 }
 
 .hamburger--slider.is-active .hamburger__inner {
-    @include mediaquery(small){
-        transform: translate3d(0, 10px, 0) rotate(45deg);
-    }
+    transform: translate3d(0, 10px, 0) rotate(45deg);
 }
 
 .hamburger--slider.is-active .hamburger__inner::before {
-    @include mediaquery(small){
-        transform: rotate(-45deg) translate3d(-5.71429px, -6px, 0);
-        opacity: 0;
-    }
+    transform: rotate(-45deg) translate3d(-5.71429px, -6px, 0);
+    opacity: 0;
 }
 
 .hamburger--slider.is-active .hamburger__inner::after {
-    @include mediaquery(small){
-        transform: translate3d(0, -16px, 0) rotate(-90deg);
-    }
+    transform: translate3d(0, -16px, 0) rotate(-90deg);
+
 }
 
 

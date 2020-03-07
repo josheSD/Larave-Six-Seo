@@ -1,5 +1,5 @@
 $(document).ready(function() {
-
+    console.log('READY');
     // Evento Hamburguer Menu
     const showMenu = (hamburguerId,navId) =>{
         const hamburger = document.getElementById(hamburguerId),
@@ -57,24 +57,28 @@ $(document).ready(function() {
 
     function inicializarScrollTop(actual_top_body){
 
-        if((typeof $('#somos').offset()) !== 'undefined'){
+        if((typeof $('#quienes-somos').offset()) !== 'undefined'){
 
 
             $('.ancla-alone').removeClass('active');
 
-            var top_politica = $('#somos').offset().top;
-            var top_sociedad = $('#servicios').offset().top;
+            var top_quienes_somos = $('#quienes-somos').offset().top;
+            var top_nuestros_geeks = $('#nuestros-geeks').offset().top;
+            var top_servicios = $('#servicios').offset().top;
+            var top_prueba = $('#prueba').offset().top;
+            var top_blog = $('#blog').offset().top;
+            var top_encuentra_geek = $('#encuentra').offset().top;
 
-            if((actual_top_body + (top_fixed - 1)) >= top_politica){
+            if((actual_top_body + (top_fixed - 1)) >= top_quienes_somos){
                 $('.ancla').removeClass('active');
-                let elementoPolitica = $('.estatico a[data-ancla="somos"]')[0];
+                let elementoPolitica = $('.menu a[data-ancla="quienes"]')[0];
                 let politica = $(elementoPolitica)[0];
                 $(politica).addClass('active')
             }
 
-            if((actual_top_body + top_fixed) >= top_sociedad){
+            if((actual_top_body + top_fixed) >= top_nuestros_geeks){
                 $('.ancla').removeClass('active');
-                let elementoSociedad = $('.estatico a[data-ancla="servicios"]')[0];
+                let elementoSociedad = $('.menu a[data-ancla="nuestros"]')[0];
                 let sociedad = $(elementoSociedad)[0];
                 $(sociedad).addClass('active')
             }

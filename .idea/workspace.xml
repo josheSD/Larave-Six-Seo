@@ -1,7 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="c2b94117-dfa9-44e1-895a-baf930bd9ab0" name="Default Changelist" comment="" />
+    <list default="true" id="c2b94117-dfa9-44e1-895a-baf930bd9ab0" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/css/app.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/css/app.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/js/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/js/app.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/js/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/js/main.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/mix-manifest.json" beforeDir="false" afterPath="$PROJECT_DIR$/public/mix-manifest.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/sass/components/_home.scss" beforeDir="false" afterPath="$PROJECT_DIR$/resources/sass/components/_home.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/sass/components/_navbar.scss" beforeDir="false" afterPath="$PROJECT_DIR$/resources/sass/components/_navbar.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/components/home.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/components/home.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/shared/navbar.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/shared/navbar.blade.php" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -12,6 +22,9 @@
     <execution>
       <executable />
     </execution>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="PhpWorkspaceProjectConfiguration">
     <include_path>
@@ -158,6 +171,8 @@
       <updated>1583538165770</updated>
       <workItem from="1583538170772" duration="113000" />
       <workItem from="1583538380409" duration="9472000" />
+      <workItem from="1583583472007" duration="1686000" />
+      <workItem from="1583588178673" duration="14053000" />
     </task>
     <servers />
   </component>
@@ -174,19 +189,19 @@
     </state>
     <state x="517" y="283" key="NewPhpFileDialog/0.0.1366.728/1366.0.1366.728@0.0.1366.728" timestamp="1583543790124" />
     <state x="517" y="283" key="NewPhpFileDialog/0.0.1366.728@0.0.1366.728" timestamp="1583542363616" />
-    <state x="0" y="0" key="SettingsEditor" timestamp="1583538290159">
+    <state x="0" y="0" key="SettingsEditor" timestamp="1583609201179">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="0" y="0" key="SettingsEditor/0.0.1366.728@0.0.1366.728" timestamp="1583538290159" />
+    <state x="0" y="0" key="SettingsEditor/0.0.1366.728@0.0.1366.728" timestamp="1583609201179" />
     <state x="339" y="162" key="run.anything.popup" timestamp="1583544033439">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="339" y="162" key="run.anything.popup/0.0.1366.728/1366.0.1366.728@0.0.1366.728" timestamp="1583544033439" />
-    <state x="346" y="49" width="672" height="678" key="search.everywhere.popup" timestamp="1583548292687">
+    <state x="346" y="49" width="672" height="678" key="search.everywhere.popup" timestamp="1583602596380">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="346" y="49" width="672" height="678" key="search.everywhere.popup/0.0.1366.728/1366.0.1366.728@0.0.1366.728" timestamp="1583544585982" />
-    <state x="346" y="49" width="672" height="678" key="search.everywhere.popup/0.0.1366.728@0.0.1366.728" timestamp="1583548292687" />
+    <state x="346" y="49" width="672" height="678" key="search.everywhere.popup/0.0.1366.728@0.0.1366.728" timestamp="1583602596380" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
