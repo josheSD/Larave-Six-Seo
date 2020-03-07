@@ -1,5 +1,5 @@
 $(document).ready(function() {
-    console.log('READY');
+
     // Evento Hamburguer Menu
     const showMenu = (hamburguerId,navId) =>{
         const hamburger = document.getElementById(hamburguerId),
@@ -13,9 +13,6 @@ $(document).ready(function() {
         }
     }
 
-    showMenu('hamburger','main-nav');
-
-
     //Wow.js se complementa con animate.css
     let wow = new WOW({
         boxClass: 'wow', // default
@@ -25,6 +22,8 @@ $(document).ready(function() {
         live: true // default
     })
     wow.init();
+
+
 
 
     //Evento para desplazamiento
@@ -57,38 +56,109 @@ $(document).ready(function() {
 
     function inicializarScrollTop(actual_top_body){
 
-        if((typeof $('#quienes-somos').offset()) !== 'undefined'){
+        if((typeof $('#somos').offset()) !== 'undefined'){
 
+            //$('.ancla-alone').removeClass('active');
 
-            $('.ancla-alone').removeClass('active');
-
-            var top_quienes_somos = $('#quienes-somos').offset().top;
-            var top_nuestros_geeks = $('#nuestros-geeks').offset().top;
+            var top_home = $('#home').offset().top;
+            var top_somos = $('#somos').offset().top;
+            var top_nuestros = $('#nuestros').offset().top;
             var top_servicios = $('#servicios').offset().top;
             var top_prueba = $('#prueba').offset().top;
-            var top_blog = $('#blog').offset().top;
-            var top_encuentra_geek = $('#encuentra').offset().top;
+            var top_encuentra = $('#encuentra').offset().top;
 
-            if((actual_top_body + (top_fixed - 1)) >= top_quienes_somos){
+            if((actual_top_body + (top_fixed - 1)) >= top_home){
                 $('.ancla').removeClass('active');
-                let elementoPolitica = $('.menu a[data-ancla="quienes"]')[0];
-                let politica = $(elementoPolitica)[0];
-                $(politica).addClass('active')
+                $('.header a[data-ancla="home"]').eq(0).addClass('active');
             }
 
-            if((actual_top_body + top_fixed) >= top_nuestros_geeks){
+            if((actual_top_body + (top_fixed - 1)) >= top_somos){
                 $('.ancla').removeClass('active');
-                let elementoSociedad = $('.menu a[data-ancla="nuestros"]')[0];
-                let sociedad = $(elementoSociedad)[0];
-                $(sociedad).addClass('active')
+                $('.main-nav a[data-ancla="somos"]').eq(0).addClass('active');
+            }
+
+            if((actual_top_body + top_fixed) >= top_nuestros){
+                $('.ancla').removeClass('active');
+                $('.main-nav a[data-ancla="nuestros"]').eq(0).addClass('active');
+            }
+
+            if((actual_top_body + top_fixed) >= top_prueba){
+                $('.ancla').removeClass('active');
+                $('.main-nav a[data-ancla="prueba"]').eq(0).addClass('active');
+            }
+
+            if((actual_top_body + top_fixed) >= top_servicios){
+                $('.ancla').removeClass('active');
+                $('.main-nav a[data-ancla="servicios"]').eq(0).addClass('active');
+            }
+
+            if((actual_top_body + top_fixed) >= top_encuentra){
+                $('.ancla').removeClass('active');
+                $('.main-nav a[data-ancla="encuentra"]').eq(0).addClass('active');
             }
 
         }else{
             $('.ancla').removeClass('active');
-            $('.ancla-alone').addClass('active');
+            //$('.ancla-alone').addClass('active');
         }
 
     }
+
+    showMenu('hamburger','main-nav');
+
+
+    // carrusel home
+    $('.home__geeks-content').slick({
+        // centerMode: true,
+        centerMode: true,
+        infinite: true,
+        centerPadding: '10px',
+        slidesToShow: 3,
+        prevArrow: $('#btn-prev'),
+        nextArrow: $('#btn-next'),
+        mobileFirst: true,
+        autoplay: true,
+        autoplaySpeed: 2000,
+        responsive: [{
+            breakpoint: 320,
+            settings: {
+                slidesToShow: 1,
+                slidesToScroll: 1,
+            }
+        },
+            {
+                breakpoint: 480,
+                settings: {
+                    slidesToShow: 2,
+                    slidesToScroll: 2,
+                }
+            },
+            {
+                breakpoint: 768,
+                settings: {
+                    slidesToShow: 3,
+                    slidesToScroll: 1,
+                }
+            },
+            {
+                breakpoint: 1024,
+                settings: {
+                    slidesToShow: 3,
+                    slidesToScroll: 1,
+                    swipeToSlide: false,
+                }
+            },
+            {
+                breakpoint: 1400,
+                settings: {
+                    slidesToShow: 3,
+                    slidesToScroll: 1,
+                    swipeToSlide: false,
+                }
+            },
+        ]
+    });
+
 
 
     //Banner

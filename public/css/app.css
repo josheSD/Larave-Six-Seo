@@ -255,6 +255,24 @@ a {
   padding-top: 88px;
 }
 
+.button a {
+  display: inline-block;
+  background: #ffb02a;
+  width: auto;
+  color: #fff;
+  border: 1px solid #ffb02a;
+  padding: 0.5em 1em;
+  border-radius: 5rem;
+  font-weight: 700;
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+.button a:hover {
+  background: #ffb02a;
+  color: #fff;
+}
+
 .wrap-slider {
   padding: 20px 0px;
   display: grid;
@@ -318,38 +336,20 @@ a {
   padding-right: 0.25em;
 }
 
-.button a {
-  display: inline-block;
-  background: #ffb02a;
-  width: auto;
-  color: #fff;
-  border: 1px solid #ffb02a;
-  padding: 0.5em 1em;
-  border-radius: 5rem;
-  font-weight: 700;
-  font-size: 1rem;
-  cursor: pointer;
-}
-
-.button a:hover {
-  background: #ffb02a;
-  color: #fff;
-}
-
-.wrap-section {
+.wrap-somos {
   display: grid;
   grid-template-rows: 1fr 1fr;
   grid-template-columns: 1fr;
 }
 
 @media screen and (min-width: 992px) {
-  .wrap-section {
+  .wrap-somos {
     grid-template-rows: 1fr;
     grid-template-columns: 1fr 1fr;
   }
 }
 
-.wrap-section__text {
+.wrap-somos__text {
   grid-row: 1/2;
   grid-column: 1/2;
   display: grid;
@@ -359,28 +359,72 @@ a {
 }
 
 @media screen and (min-width: 992px) {
-  .wrap-section__text {
+  .wrap-somos__text {
     grid-row: 1/2;
     grid-column: 2/3;
   }
 }
 
-.wrap-section__hero {
+.wrap-somos__hero {
   grid-row: 2/3;
   grid-column: 1/2;
 }
 
 @media screen and (min-width: 992px) {
-  .wrap-section__hero {
+  .wrap-somos__hero {
     grid-row: 1/2;
     grid-column: 1/2;
   }
 }
 
-.wrap-section__hero img {
+.wrap-somos__hero img {
   display: block;
   width: 90%;
   margin: 0 auto;
+}
+
+.wrap-nuestros {
+  display: grid;
+  grid-template-rows: 1fr 1fr;
+  grid-template-columns: 1fr;
+  height: 550px;
+  align-items: center;
+}
+
+@media screen and (min-width: 992px) {
+  .wrap-nuestros {
+    padding: 0px;
+    grid-template-rows: 1fr;
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+.wrap-nuestros__text {
+  grid-row: 1/2;
+  grid-column: 1/2;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
+  grid-row-gap: 20px;
+}
+
+@media screen and (min-width: 992px) {
+  .wrap-nuestros__text {
+    grid-row: 1/2;
+    grid-column: 1/2;
+  }
+}
+
+.wrap-nuestros__hero {
+  grid-row: 2/3;
+  grid-column: 1/2;
+}
+
+@media screen and (min-width: 992px) {
+  .wrap-nuestros__hero {
+    grid-row: 1/2;
+    grid-column: 2/3;
+  }
 }
 
 .slick-dots {

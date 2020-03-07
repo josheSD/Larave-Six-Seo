@@ -4,13 +4,11 @@
     <div class="esquema">
         <div class="navbar">
             <div class="navbar__logo">
-                <a href="{{ url('/') }}">
+                <a href="{{ url('/') }}" class="ancla" data-ancla="home">
                     <img src="{{ asset('img/logo.svg') }}" class="navbar__logo-hero" alt="Logo">
                 </a>
             </div>
             <div class="navbar__menu">
-
-
                 <!-- smartphone -->
                 <div class="hamburger hamburger--slider" id="hamburger">
                     <span class="hamburger__box">
@@ -22,7 +20,7 @@
                 <nav class="main-nav" id="main-nav">
                     <ul class="menu">
                         <div id="is_home"></div>
-                        <li class="menu__item"><a class="menu__item-link ancla scrolling" href="{{ url('/') }}"  data-ancla="quienes">¿Quiénes somos?</a></li>
+                        <li class="menu__item"><a class="menu__item-link ancla scrolling" href="{{ url('/') }}"  data-ancla="somos">¿Quiénes somos?</a></li>
                         <li class="menu__item"><a class="menu__item-link ancla scrolling" href="{{ url('/') }}"  data-ancla="nuestros">Nuestros geeks</a></li>
                         <li class="menu__item"><a class="menu__item-link ancla scrolling" href="{{ url('/') }}"  data-ancla="servicios">Servicios</a></li>
                         <li class="menu__item"><a class="menu__item-link ancla scrolling" href="{{ url('/') }}"  data-ancla="prueba">Haz la prueba</a></li>
