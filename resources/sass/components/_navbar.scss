@@ -1,0 +1,212 @@
+.header{
+    background-color: getColor(primary);
+    position:fixed;
+    z-index:var(--z-fixed);
+    width:100%;
+}
+
+.esquema{
+    width:100%;
+    max-width:1200px;
+    margin: 0 auto;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+.navbar{
+    height:$height-header;
+    display:grid;
+    grid-template-rows: 1fr;
+    grid-template-columns:  repeat(2,1fr);
+    align-items: center;
+
+    &__logo{
+        justify-self: start;
+    }
+
+    &__logo-hero{
+        width:10rem;
+    }
+
+    &__menu{
+        justify-self: end;
+    }
+
+}
+
+.main-nav{
+
+    position:fixed;
+    height:calc(100vh - #{$height-header});
+    top:$height-header;
+    width:80vw;
+    right:-80vw;
+    background-color:green;
+    transition: right .3s;
+    z-index: var(--z-fixed);
+
+    @include mediaquery(large){
+        position:static;
+        background:transparent;
+        height:auto;
+        width:auto;
+    }
+
+    &.show{
+        right:0;
+    }
+
+}
+
+.menu{
+
+    list-style: none;
+
+    @include mediaquery(large){
+        display:flex;
+    }
+
+    &__item{
+        @include mediaquery(large){
+            padding:1rem;
+        }
+    }
+
+    &__item:last-child{
+        @include mediaquery(large){
+            padding-right:0px;
+        }
+    }
+
+}
+
+
+
+// Hamburguer
+.hamburger {
+
+    @include mediaquery(small){
+        // padding: 15px 15px;
+        display: inline-block;
+        cursor: pointer;
+        transition-property: opacity, filter;
+        transition-duration: 0.15s;
+        transition-timing-function: linear;
+        font: inherit;
+        color: inherit;
+        text-transform: none;
+        background-color: transparent;
+        border: 0;
+        margin: 0;
+        overflow: visible;
+
+        &:hover {
+            opacity: 0.7;
+        }
+        &.is-active:hover {
+            opacity: 0.7;
+        }
+        &.is-active .hamburger__inner,
+        &.is-active .hamburger__inner::before,
+        &.is-active .hamburger__inner::after{
+            background-color: #000;
+        }
+    }
+
+
+    @include mediaquery(large){
+        display:none;
+    }
+
+}
+
+.hamburger__box{
+    @include mediaquery(small){
+        width: 30px;
+        height: 20px;
+        display: inline-block;
+        position: relative;
+    }
+}
+
+.hamburger__inner {
+    @include mediaquery(small){
+        display: block;
+        top: 50%;
+        margin-top: -2px;
+    }
+}
+
+.hamburger__inner,
+.hamburger__inner::before,
+.hamburger__inner::after {
+    @include mediaquery(small){
+        width: 30px;
+        height: 4px;
+        background-color: #000;
+        border-radius: 4px;
+        position: absolute;
+        transition-property: transform;
+        transition-duration: 0.15s;
+        transition-timing-function: ease;
+    }
+}
+.hamburger__inner::before, .hamburger__inner::after {
+    content: "";
+    @include mediaquery(small){
+        display: block;
+    }
+}
+
+.hamburger__inner::before {
+    @include mediaquery(small){
+        top: -10px;
+    }
+}
+
+.hamburger__inner::after {
+    @include mediaquery(small){
+        bottom: -10px;
+    }
+}
+
+.hamburger--slider .hamburger__inner {
+    @include mediaquery(small){
+        top: 2px;
+    }
+}
+
+.hamburger--slider .hamburger__inner::before {
+    @include mediaquery(small){
+        top: 8px;
+        transition-property: transform, opacity;
+        transition-timing-function: ease;
+        transition-duration: 0.15s;
+    }
+}
+.hamburger--slider .hamburger__inner::after {
+    @include mediaquery(small){
+        top: 16px;
+    }
+}
+
+.hamburger--slider.is-active .hamburger__inner {
+    @include mediaquery(small){
+        transform: translate3d(0, 10px, 0) rotate(45deg);
+    }
+}
+
+.hamburger--slider.is-active .hamburger__inner::before {
+    @include mediaquery(small){
+        transform: rotate(-45deg) translate3d(-5.71429px, -6px, 0);
+        opacity: 0;
+    }
+}
+
+.hamburger--slider.is-active .hamburger__inner::after {
+    @include mediaquery(small){
+        transform: translate3d(0, -16px, 0) rotate(-90deg);
+    }
+}
+
+

@@ -1,0 +1,73 @@
+.banner{
+    background-color: getColor(secondary);
+}
+
+.l-home{
+    padding-top:$height-header;
+}
+
+.wrap-slider{
+    display:grid;
+    grid-template-rows:1fr 1fr;
+    grid-template-columns:1fr 1fr;
+    height:448px;
+    align-items: center;
+    @include mediaquery(large){
+        grid-template-rows:1fr;
+    }
+
+    &__text{
+        grid-column:1/2;
+        grid-row:1/2;
+        @include mediaquery(large){
+            grid-column:1/2;
+            grid-row:1/2;
+        }
+    }
+    &__hero{
+        height:504px;
+        grid-column:1/2;
+        grid-row:2/3;
+        @include mediaquery(large){
+            grid-column:2/3;
+            grid-row:1/2;
+        }
+    }
+
+    &__hero > img{
+        width:90%;
+    }
+}
+
+
+
+// Button slider banner
+.slick-dots {
+    bottom: 15px;
+}
+
+.slick-dots li {
+    width: 4em;
+    height: 0.5em;
+}
+
+.slick-dots li button {
+    width: 100%;
+    height: 100%;
+}
+
+.slick-dots li button:before {
+    -webkit-transition: 0.3s;
+    -o-transition: 0.3s;
+    transition: 0.3s;
+    content: '';
+    background-color: #fff;
+    width: 100%;
+    height: 100%;
+    border-radius: 1em;
+}
+
+.slick-dotted.slick-slider{
+    margin-bottom:0px;
+}
+
